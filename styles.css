@@ -1,0 +1,76 @@
+* {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: green;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.todo__content {
+    border: 1px solid rgb(147, 147, 247);
+    margin: 20px 60px 0 40px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: white;
+    margin-left: 200px;
+}
+
+h3{
+    font-weight: 700;
+    color: rgb(56, 40, 40);
+    margin-left: 13px;
+
+}
+
+.submit__items {
+    margin-left: 10px;
+}
+
+.todo__text {
+    border-radius: 1px;
+    padding: 8px;
+}
+
+.todo_submit__button {
+    background-color: rgb(66, 66, 185);
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.update-button {
+    background-color: rgb(0, 140, 255);
+    color: white;
+    border-radius: 5px;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.todo-item {
+    margin: 0 25px 0 25px;
+    border: 1px solid black;
+    padding: 12px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+
+
+
+
+
