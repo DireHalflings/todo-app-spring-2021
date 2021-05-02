@@ -1,0 +1,284 @@
+console.log('%cDocument Section', "font-size: 24px; color:green; font-family:system-ui")
+
+// // print out entire HTML document
+// console.log(document);
+
+// console.log(document.DOMAIN);
+
+// console.log(document.URL);
+
+// // print the title of the document
+// console.log(document.title);
+
+// console.log(document.doctype);
+
+// console.log('HEAD!!');
+// console.log(document.head);
+
+// console.log('Body!');
+// console.log(document.body);
+
+// grabs all the forms
+// console.log("FORMS!");
+// console.log(document.forms[0]);
+// console.log(document.forms[1]);
+// console.log(document.forms);
+// console.log('----------------------');
+
+// console.log('%Selection Section', "font-size: 24px;color:green;font-family:system-ui")
+// let bodyForm = document.getElementById('body-form');
+// console.log(bodyForm);
+
+// // get element by className, used to return all instances haging same classname
+// let listItems = document.querySelectorAll('.list-item')
+// console.log(listItems);
+// console.log(listItems[2]);
+
+// get element by tagname
+// let unorderedList = document.querySelectorAll('#user-list');
+// console.log(unorderedList);
+
+// // query selector
+// // use . notation for class name
+// let headerText = document.querySelector('.header-text')
+// let headerClass = document.getElementsByClassName('.header-text')
+// console.log(headerText);
+// console.log(headerClass);
+
+// // select ALL queries with header-text className
+// let headerAllText = document.querySelectorAll('.header-text')
+// console.log(headerAllText);
+
+// console.log('%cTraversal Section', "font-size: 24px;color:green;font-family:system-ui")
+// let item = document.querySelector('#item');
+// console.log(item)
+
+// // target its parent of item
+// console.log(item.parentNode)
+
+
+// highlighting its parent ul all in pink!
+// item.parentNode.style.backgroundColor = 'pink';
+// let ul = document.querySelector('#user-list');
+// console.log(ul);
+// console.log("CHILDREN!");
+// // access children
+// // console.log(ul.childNodes);
+
+// // return all children under user-list tag
+// console.log(ul.children);
+
+// console.log(ul.firstElementChild);
+
+
+// console.log(ul.lastElementChild);
+
+// // // go to next element
+// console.log(ul.firstElementChild.nextElementSibling);
+
+// // // reverse
+// console.log(ul.lastElementChild.previousElementSibling);
+
+// // returns null
+// console.log(ul.lastElementChild.nextElementSibling);
+
+// console.log('%Creating Element Section', "font-size: 24px;color:green;font-family:system-ui")
+
+// // need to add it onto our page, created div element
+// let newDiv = document.createElement('div');
+// // assign className to the newly made div
+// newDiv.className = 'some-class';
+// newDiv.setAttribute('title', 'My Title');
+// newDiv.setAttribute('sheep', '3');
+
+
+// // add HTML to our newly created div!
+// let textDiv = document.createElement('div').innerHTML = "Hello World!";
+// console.log(newDiv);
+// newDiv.append(textDiv);
+
+// console.log(newDiv);
+// let body = document.querySelector('body');
+// body.append(newDiv);
+// newDiv.style.fontSize = '24px';
+
+// // console.log('%Remove Element Section', "font-size: 24px;color:green;font-family:system-ui")
+// console.log("REMOVE!")
+// newDiv.remove();
+
+///////////////// EVENTS ///////////////////////////
+// let myButton = document.querySelector('.form-button');
+let myButton = document.querySelector('.form-button');
+
+// let i = 0;
+// myButton.addEventListener('click', (event) => {
+    // records events, click is mousedown and mouseup event!
+    // console.log('Event Type:' + event.type)
+
+
+//     // prevents refresh page and append any values to URL
+    // event.preventDefault();
+    // console.log('BUTTON CLICKED!' + i)
+    // i++;
+
+//     // changes text when clicking on button
+//     myButton.innerHTML = "YOU CLICKED!"
+    // console.log(event);
+//     // goes off event whatever on
+    // console.log(event.target)
+
+//     // // pull innerHTML
+    // console.log(event.target.innerHTML)
+
+//     // print class Name
+//     console.log(event.target.className)
+
+//     // mouse x and ycoordinates, origin upper left corner
+    // console.log(event.clientX);
+    // console.log(event.clientY);
+
+// // coordinates based off element
+    // console.log(event.offsetX);
+    // console.log(event.offsetY);
+
+    // returns true if buttons below are clicked
+    // console.log(event.ctrlKey);
+    // console.log(event.shiftKey);
+    // console.log(event.altKey);
+// })
+
+// myButton.addEventListener('dblclick', (event) => {
+//     event.preventDefault();
+
+//     console.log('Event Type:' + event.type)
+// })
+
+// myButton.addEventListener('mousedown', (event) => {
+//     event.preventDefault();
+
+//     console.log('MOUSEDOWN!')
+// })
+
+// myButton.addEventListener('mouseup', (event) => {
+//     event.preventDefault();
+
+//     console.log('MOUSEUP!' + event.type)
+// })
+
+
+// mouse move events
+let aDiv = document.createElement('div');
+aDiv.id='demo-div';
+aDiv.style.width = "400px";
+aDiv.style.height = "400px";
+aDiv.style.backgroundColor = "darkgray";
+aDiv.style.marginTop = "20px";
+// add gray box to the body!
+const body = document.querySelector('body');
+console.log(aDiv);
+body.append(aDiv);
+
+let innerDiv = document.createElement('div');
+innerDiv.id='inner-div';
+innerDiv.style.width = "200px";
+innerDiv.style.height = "200px";
+innerDiv.style.backgroundColor = "green";
+innerDiv.style.borderRadius = "20px";
+
+// add innerDiv to aDiv element
+aDiv.appendChild(innerDiv);
+
+// // mouseenter or mouseleave track div element event even if in child
+//    mouseleave tracks when you leave div
+// // mouseover and mouseout will track div UNLESS if you are in child div
+
+// // prints mouse enter when mousing over element
+// // mouse leave when leaving div
+
+// aDiv.addEventListener('mouseleave', (e) => {
+//     e.preventDefault();
+//     console.log(e.type);
+//     console.log(e.target);
+// })
+
+// aDiv.addEventListener('mouseenter', (e) => {
+//     e.preventDefault();
+//     console.log(e.type);
+//     console.log(e.target);
+//     })
+
+    // aDiv.addEventListener('mouseover', (e) => {
+    //     e.preventDefault();
+    //     console.log(e.type);
+    //     console.log(e.target);
+    // })
+    
+    // aDiv.addEventListener('mouseout', (e) => {
+    //     e.preventDefault();
+    //     console.log(e.type);
+    //     console.log(e.target);
+    //     })
+
+    // innerDiv.addEventListener('mouseleave', (e) => {
+    //     e.preventDefault();
+    //     console.log(e.type);
+    //     console.log(e.target);
+    // })
+// const runEvent = (e) => {
+//     e.preventDefault();
+//     console.log("Even Type: " + e.type);
+//     console.log("Target: " + e.target);
+// }
+
+// // aDiv.addEventListener('mouseenter', runEvent);
+// // aDiv.addEventListener('mouseleave', runEvent);
+
+// // trigger mouse move when moving pointer inside div box
+// // change color accordingly
+// aDiv.addEventListener('mousemove', (e) => {
+//     aDiv.style.backgroundColor = "rgb(" + e.offsetX + "," + e.offsetY + ", 40)";
+// })
+
+// let formInput = document.querySelector('.form-input');
+// formInput.addEventListener('keydown', (e) => {
+//     // prints targeted HTML
+//     console.log(e.target)
+//     console.log(e.target.value);
+// })
+// let formInput = document.querySelector('.form-input');
+// formInput.addEventListener('focus', (e) => {
+//     e.preventDefault();
+//     console.log('FOCUS!');
+// })
+
+// formInput.addEventListener('blur', (e) => {
+//     e.preventDefault();
+//     console.log('BLUR!')
+// })
+
+let formInput = document.querySelector('.form-input');
+let formButton = document.querySelector('.form-button');
+// // console.log(formInput);
+// // const runKeyEvent = (e) => {
+// //     console.log(e.target.value)
+// // }
+// // // formInput.addEventListener('keydown', runKeyEvent);
+// // formInput.addEventListener('keyup', runKeyEvent);
+
+// // copy or paste event
+formButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+    document.getElementById('inner-div').innerHTML = e.target.value;
+})
+
+
+// formInput.addEventListener('cut', (e) => alert('CUT!'));
+// formInput.addEventListener('paste', (e) => alert('PASTE!'));
+// formInput.addEventListener('copy', () => alert('COPY!'));
+// // same as select
+// formInput.addEventListener('focus', () => console.log('FOCUS'));
+// // same as deselect
+// formInput.addEventListener('blur', () => console.log('BLUR'));
+
+
